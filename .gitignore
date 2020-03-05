@@ -2,3 +2,4 @@ fonts/
 output/
 env/
 venv/
+.idea/

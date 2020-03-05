@@ -5,7 +5,7 @@ from PIL import Image
 from PIL import ImageDraw
 import numpy as np
 
-FONT_NAME = ""
+FONT_NAME = "MTRXHeadline-Regular.ttf"
 FONT_COLOURS = ["#000000", "#ff0000", "#a00041", "#ff9e1c", "#ffffff"]
 
 font = ImageFont.truetype(f"fonts/{FONT_NAME}", 200)
@@ -36,7 +36,7 @@ def get_image(letter: chr, colour: str):
     # row_0 = next((i for i, x in enumerate(non_empty_rows) if x != 0), 0)
     # row_1 = len(non_empty_rows) - next((i for i, x in enumerate(reversed(non_empty_rows)) if x != 0), -1)
 
-    crop_box = (25, 275, column_0, column_1)
+    crop_box = (0, 275, column_0, column_1)
 
     image_data_new = image_data[crop_box[0]:crop_box[1]+1, crop_box[2]:crop_box[3]+1, :]
     new_image = Image.fromarray(image_data_new)
